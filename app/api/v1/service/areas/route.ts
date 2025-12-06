@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { Area } from '@/lib/types';
 
 // Dummy area data
-let areas: Area[] = [
+const areas: Area[] = [
   {
     id: '1',
     name: 'North Field',
@@ -67,6 +67,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: false,
       error: 'Failed to create area',
+      message: error instanceof Error ? error.message : 'Unknown error',
     }, { status: 400 });
   }
 }

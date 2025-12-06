@@ -61,7 +61,7 @@ export const CostCalculator: React.FC<CostCalculatorProps> = ({ onCalculationCom
     setIsCalculating(true);
     try {
       const inputUsages: InputUsage[] = Object.entries(selectedInputs)
-        .filter(([_, quantity]) => quantity > 0)
+        .filter(([, quantity]) => quantity > 0)
         .map(([inputId, quantity]) => {
           const input = inputs.find(i => i.id === inputId);
           return {
