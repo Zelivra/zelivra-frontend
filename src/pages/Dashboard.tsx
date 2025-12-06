@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
       setTimeout(() => setMessage(''), 3000);
     } catch (error) {
       console.error('Error saving area:', error);
-      setMessage('Error saving area');
+      setMessage(t('dashboard.errorSavingArea'));
     } finally {
       setIsSaving(false);
     }
@@ -113,14 +113,14 @@ const Dashboard: React.FC = () => {
         <div className="map-section">
           <h3>{t('dashboard.selectArea')}</h3>
           {message && <div className="success-message">{message}</div>}
-          {isSaving && <div className="loading-message">Saving area...</div>}
+          {isSaving && <div className="loading-message">{t('dashboard.savingArea')}</div>}
           <MapSelector onAreaSelected={handleAreaSelected} />
         </div>
 
         <div className="areas-section">
           <h3>Saved Areas</h3>
           {isLoading ? (
-            <p>Loading areas...</p>
+            <p>{t('dashboard.loadingAreas')}</p>
           ) : (
             <div className="areas-list">
               {areas.map((area) => (

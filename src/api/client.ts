@@ -46,7 +46,9 @@ apiClient.interceptors.response.use(
         return apiClient(originalRequest);
       } catch (refreshError) {
         localStorage.removeItem('accessToken');
-        window.location.href = '/';
+        localStorage.removeItem('user');
+        // Emit a custom event for logout to be handled by the application
+        window.dispatchEvent(new CustomEvent('auth:logout'));
         return Promise.reject(refreshError);
       }
     }

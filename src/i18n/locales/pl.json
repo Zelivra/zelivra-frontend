@@ -49,11 +49,17 @@
     "selectArea": "Wybierz obszar na mapie",
     "areaSelected": "Obszar wybrany",
     "saveArea": "Zapisz obszar",
-    "areaSaved": "Obszar został zapisany pomyślnie"
+    "areaSaved": "Obszar został zapisany pomyślnie",
+    "errorSavingArea": "Błąd podczas zapisywania obszaru",
+    "loadingAreas": "Ładowanie obszarów...",
+    "savingArea": "Zapisywanie obszaru..."
   },
   "language": {
     "select": "Wybierz język",
     "pl": "Polski",
     "en": "English"
+  },
+  "common": {
+    "loading": "Ładowanie..."
   }
 }

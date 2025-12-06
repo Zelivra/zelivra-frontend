@@ -30,6 +30,17 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }
     
     setIsLoading(false);
+
+    // Listen for auth:logout event from API interceptor
+    const handleLogout = () => {
+      setUser(null);
+    };
+    
+    window.addEventListener('auth:logout', handleLogout);
+    
+    return () => {
+      window.removeEventListener('auth:logout', handleLogout);
+    };
   }, []);
 
   const login = async (credentials: LoginRequest) => {

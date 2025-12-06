@@ -79,7 +79,7 @@ const Login: React.FC = () => {
             {error && <div className="error-message">{error}</div>}
 
             <button type="submit" className="btn-submit" disabled={isLoading}>
-              {isLoading ? 'Loading...' : t('auth.login.submit')}
+              {isLoading ? t('common.loading') : t('auth.login.submit')}
             </button>
           </form>
         </div>
