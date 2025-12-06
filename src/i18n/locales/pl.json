@@ -1,0 +1,59 @@
+{
+  "app": {
+    "title": "Zelivra",
+    "tagline": "Kontroluj koszty swojej produkcji"
+  },
+  "nav": {
+    "home": "Strona główna",
+    "features": "Funkcje",
+    "about": "O nas",
+    "login": "Zaloguj się"
+  },
+  "landing": {
+    "hero": {
+      "title": "Monitoruj i kontroluj koszty produkcji",
+      "subtitle": "Zelivra pomoże Ci śledzić wydatki i optymalizować procesy produkcyjne w czasie rzeczywistym",
+      "cta": "Rozpocznij teraz"
+    },
+    "features": {
+      "title": "Funkcje",
+      "realtime": {
+        "title": "Monitoring w czasie rzeczywistym",
+        "description": "Śledź koszty produkcji na żywo dzięki zaawansowanym czujnikom i analizie danych"
+      },
+      "map": {
+        "title": "Mapa obszarów",
+        "description": "Wizualizuj swoje obszary produkcyjne i zarządzaj nimi na interaktywnej mapie"
+      },
+      "analytics": {
+        "title": "Zaawansowana analityka",
+        "description": "Otrzymuj szczegółowe raporty i prognozy dotyczące kosztów produkcji"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Zaloguj się",
+      "email": "Email",
+      "password": "Hasło",
+      "submit": "Zaloguj się",
+      "error": "Nieprawidłowy email lub hasło"
+    },
+    "logout": "Wyloguj się"
+  },
+  "dashboard": {
+    "title": "Panel kontrolny",
+    "welcome": "Witaj z powrotem",
+    "areas": "Obszary produkcyjne",
+    "costs": "Koszty",
+    "selectArea": "Wybierz obszar na mapie",
+    "areaSelected": "Obszar wybrany",
+    "saveArea": "Zapisz obszar",
+    "areaSaved": "Obszar został zapisany pomyślnie"
+  },
+  "language": {
+    "select": "Wybierz język",
+    "pl": "Polski",
+    "en": "English"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "app": {
+    "title": "Zelivra",
+    "tagline": "Control your production costs"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "about": "About",
+    "login": "Login"
+  },
+  "landing": {
+    "hero": {
+      "title": "Monitor and control production costs",
+      "subtitle": "Zelivra helps you track expenses and optimize production processes in real-time",
+      "cta": "Get Started"
+    },
+    "features": {
+      "title": "Features",
+      "realtime": {
+        "title": "Real-time Monitoring",
+        "description": "Track production costs live with advanced sensors and data analytics"
+      },
+      "map": {
+        "title": "Area Mapping",
+        "description": "Visualize and manage your production areas on an interactive map"
+      },
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Get detailed reports and forecasts about your production costs"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "error": "Invalid email or password"
+    },
+    "logout": "Logout"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "areas": "Production Areas",
+    "costs": "Costs",
+    "selectArea": "Select area on map",
+    "areaSelected": "Area selected",
+    "saveArea": "Save area",
+    "areaSaved": "Area saved successfully"
+  },
+  "language": {
+    "select": "Select language",
+    "pl": "Polski",
+    "en": "English"
+  }
+}
