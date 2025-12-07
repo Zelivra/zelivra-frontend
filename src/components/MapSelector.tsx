@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Polygon, useMapEvents } from 'react-leaflet';
 import { LatLng } from 'leaflet';
 import { useTranslation } from 'react-i18next';
 import 'leaflet/dist/leaflet.css';
-import '../styles/MapSelector.css';
 
 interface MapSelectorProps {
   onAreaSelected: (coordinates: { lat: number; lng: number }[]) => void;
@@ -54,16 +53,24 @@ const MapSelector: React.FC<MapSelectorProps> = ({ onAreaSelected }) => {
   }, []);
 
   return (
-    <div className="map-selector">
-      <div className="map-controls">
-        <p className="map-instructions">
+    <div className="w-full">
+      <div className="flex justify-between items-center mb-4 flex-wrap gap-4">
+        <p className="font-medium text-text-secondary m-0 text-[15px]">
           {t('dashboard.selectArea')} {points.length > 0 && `(${points.length} points)`}
         </p>
-        <div className="map-buttons">
-          <button onClick={handleClear} disabled={points.length === 0} className="btn-secondary">
+        <div className="flex gap-3">
+          <button 
+            onClick={handleClear} 
+            disabled={points.length === 0}
+            className="px-6 py-2.5 font-medium text-[15px] rounded-md cursor-pointer transition-all duration-base bg-surface text-text-primary border border-border shadow-xs hover:not-disabled:bg-surface-elevated hover:not-disabled:border-accent hover:not-disabled:-translate-y-px hover:not-disabled:shadow-sm active:not-disabled:translate-y-0 active:not-disabled:shadow-xs disabled:opacity-50 disabled:cursor-not-allowed"
+          >
             Clear
           </button>
-          <button onClick={handleSave} disabled={points.length < 3} className="btn-primary">
+          <button 
+            onClick={handleSave} 
+            disabled={points.length < 3}
+            className="px-6 py-2.5 font-medium text-[15px] rounded-md cursor-pointer transition-all duration-base bg-primary text-white border-none shadow-sm hover:not-disabled:bg-primary-light hover:not-disabled:-translate-y-px hover:not-disabled:shadow-md active:not-disabled:translate-y-0 active:not-disabled:shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+          >
             {t('dashboard.saveArea')}
           </button>
         </div>
@@ -71,7 +78,7 @@ const MapSelector: React.FC<MapSelectorProps> = ({ onAreaSelected }) => {
       <MapContainer
         center={[52.2297, 21.0122]}
         zoom={13}
-        className="map-container"
+        className="h-[500px] w-full rounded-lg overflow-hidden border border-border shadow-md transition-shadow duration-base hover:shadow-lg md:h-[400px]"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
