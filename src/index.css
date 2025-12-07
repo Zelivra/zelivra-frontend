@@ -5,9 +5,57 @@
 }
 
 :root {
+  /* Muted, sophisticated color palette */
+  --color-primary: #6b7a99;
+  --color-primary-light: #8793af;
+  --color-primary-dark: #4a5568;
+  --color-accent: #9ca6ba;
+  --color-background: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #fafbfc;
+  --color-border: #e4e7ec;
+  --color-border-light: #f0f2f5;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #5a6a7a;
+  --color-text-tertiary: #8893a4;
+  --color-success: #5c946e;
+  --color-error: #c5697a;
+  --color-warning: #d4965f;
+  
+  /* Subtle gradients */
+  --gradient-subtle: linear-gradient(135deg, #f7f8fa 0%, #eef0f5 100%);
+  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+  
+  /* Shadows for depth */
+  --shadow-xs: 0 1px 2px rgba(45, 55, 72, 0.04);
+  --shadow-sm: 0 2px 4px rgba(45, 55, 72, 0.06);
+  --shadow-md: 0 4px 8px rgba(45, 55, 72, 0.08);
+  --shadow-lg: 0 8px 16px rgba(45, 55, 72, 0.1);
+  --shadow-xl: 0 12px 24px rgba(45, 55, 72, 0.12);
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
 
   font-synthesis: none;
@@ -21,6 +69,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  background: var(--color-background);
+  color: var(--color-text-primary);
 }
 
 #root {
@@ -29,9 +79,67 @@ body {
 
 button {
   font-family: inherit;
+  cursor: pointer;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styles */
+::selection {
+  background-color: rgba(107, 122, 153, 0.2);
+  color: var(--color-text-primary);
+}
+
+/* Focus visible styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Global animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scaleX(0.98);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
 }
