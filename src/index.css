@@ -5,26 +5,26 @@
 }
 
 :root {
-  /* Muted, sophisticated color palette */
-  --color-primary: #6b7a99;
-  --color-primary-light: #8793af;
-  --color-primary-dark: #4a5568;
-  --color-accent: #9ca6ba;
-  --color-background: #f7f8fa;
+  /* Purple, sophisticated color palette */
+  --color-primary: #8b5cf6;
+  --color-primary-light: #a78bfa;
+  --color-primary-dark: #7c3aed;
+  --color-accent: #c084fc;
+  --color-background: #faf5ff;
   --color-surface: #ffffff;
-  --color-surface-elevated: #fafbfc;
-  --color-border: #e4e7ec;
-  --color-border-light: #f0f2f5;
-  --color-text-primary: #2d3748;
-  --color-text-secondary: #5a6a7a;
-  --color-text-tertiary: #8893a4;
+  --color-surface-elevated: #fdf4ff;
+  --color-border: #e9d5ff;
+  --color-border-light: #f3e8ff;
+  --color-text-primary: #2d1b4e;
+  --color-text-secondary: #5b4b7a;
+  --color-text-tertiary: #9084a4;
   --color-success: #5c946e;
   --color-error: #c5697a;
   --color-warning: #d4965f;
   
-  /* Subtle gradients */
-  --gradient-subtle: linear-gradient(135deg, #f7f8fa 0%, #eef0f5 100%);
-  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+  /* Purple gradients */
+  --gradient-subtle: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  --gradient-surface: linear-gradient(180deg, #ffffff 0%, #fdf4ff 100%);
   
   /* Shadows for depth */
   --shadow-xs: 0 1px 2px rgba(45, 55, 72, 0.04);
